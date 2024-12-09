@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Declare parameters with defaults -->
+    <arg name="input_bag_path" default="/path/to/input"/>
+    <arg name="output_bag_path" default="/path/to/output/"/>
+    <arg name='target_topic' default="/image_raw" />
+    
+
+    <!-- robot_state_publisher -->
+    <node pkg="ros2_bag_manager" exec="extract_topic" name="extract_topic">
+        <param name="input_bag_path" value="$(var input_bag_path)" />
+        <param name="output_bag_path" value="$(var output_bag_path)" />
+        <param name="target_topic" value="$(var target_topic)" />
+    </node>
+</launch>
