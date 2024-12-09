@@ -2,7 +2,7 @@
 <launch>
     <!-- Declare parameters with defaults -->
     <arg name="input_bag_path" default="/path/to/input"/>
-    <arg name="output_bag_path" default="/path/to/output/"/>
+    <arg name="output_bag_path" default="/path/to/output"/>
     <arg name='target_topic' default="/image_raw" />
     
 
